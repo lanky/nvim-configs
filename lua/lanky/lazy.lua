@@ -17,11 +17,10 @@ vim.opt.rtp:prepend(lazypath)
 require("lazy").setup {
   spec = { import = "lanky.plugins" },
   install = { colorscheme = { "habamax" } },
-  -- options to lazy.nvim
-  --     change_detection = {
-  --       enabled = true,
-  --       notify = false,
-  --     },
+  change_detection = {
+    enabled = true,
+    notify = false,
+  },
   checker = {
     enabled = true,
     notify = false,
