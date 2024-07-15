@@ -23,9 +23,13 @@ return { -- Autoformat
         lsp_fallback = not disable_filetypes[vim.bo[bufnr].filetype],
       }
     end,
+    formatters = {
+      yamlfix = { env = { YAMLFIX_SEQUENCE_STYLE = "block_style" } }
+    },
     formatters_by_ft = {
-      --      lua = { "stylua" },
+      lua = { "stylua" },
       python = { "ruff" },
+      yaml = { "yamlfix" },
       -- Conform can also run multiple formatters sequentially
       -- python = { "isort", "black" },
       --
